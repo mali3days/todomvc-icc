@@ -13,7 +13,7 @@ export default class Footer extends Component {
   static propTypes = {
     completedCount: PropTypes.number.isRequired,
     activeCount: PropTypes.number.isRequired,
-    filter: PropTypes.string.isRequired,
+    filter: PropTypes.object.isRequired,
     
     onClearCompleted: PropTypes.func.isRequired,
     onFilterClick: PropTypes.func.isRequired
@@ -35,7 +35,7 @@ export default class Footer extends Component {
     const { filter: selectedFilter, onFilterClick } = this.props
 
     return (
-      <a className={classnames({ selected: filter === selectedFilter })}
+      <a className={classnames({ selected: filter === selectedFilter.value })}
          style={{ cursor: 'pointer' }}
          onClick={() => onFilterClick(filter)}>
         {title}
