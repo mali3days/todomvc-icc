@@ -6,8 +6,9 @@ import EditTodoInput from '../TodoInput/edit'
 export default class TodoItem extends Component {
   static propTypes = {
     todo: PropTypes.object.isRequired,
-    leftComponent: PropTypes.object,
-    rightComponent: PropTypes.object
+
+    leftComponent: PropTypes.func,
+    rightComponent: PropTypes.func
   }
 
   state = {
