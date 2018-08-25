@@ -41,9 +41,8 @@ function shouldCompleteTodo(oldState, newState, payload) {
   const allTodos = allTodoItems(newState)
   const list = listIndex(newState).byId[listId]
   const todoIds = list.tasks
-
-
   const areAllMarked = todoIds.every(id => todosById[id].completed)
+
   return {
     payloads: allTodos
       .filter(todo => todoIds.indexOf(todo.id) > -1)

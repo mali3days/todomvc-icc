@@ -1,8 +1,12 @@
 import { createSelector } from 'reselect'
-import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from '../../domains/filter/constants'
+import {
+  SHOW_ALL,
+  SHOW_COMPLETED,
+  SHOW_ACTIVE,
+} from '../../domains/filter/constants'
 import { todoIndex } from '../../domains/todo/selectors'
 import { listById } from '../../domains/list/selectors'
-import { filter } from '../../domains/filter/selectors'
+import { filterById } from '../../domains/filter/selectors'
 
 const TODO_FILTERS = {
   [SHOW_ALL]: () => true,
@@ -13,6 +17,9 @@ const TODO_FILTERS = {
 export const filteredTodoIds = createSelector(
   listById,
   todoIndex,
-  filter,
-  (list, todoIndex, filter) => list.tasks.filter(id => TODO_FILTERS[filter](todoIndex.byId[id]))
+  filterById,
+  (list, todoIndex, filter) => {
+    const todoIds = list.tasks
+    return todoIds.filter(id => TODO_FILTERS[filter.value](todoIndex.byId[id]));
+  }
 )

@@ -5,4 +5,3 @@ export const DELETE_FROM_LIST = 'list://DELETE_FROM_LIST'
 
 export const COMPLETE_ALL = 'list://COMPLETE_ALL'
 export const CLEAR_COMPLETED = 'list://CLEAR_COMPLETED'
-
