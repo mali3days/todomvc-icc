@@ -29,9 +29,9 @@ Changing the app and moving things around are much easier than with other approa
  
 If you want to **feel** the benefits, I'd suggest to fork this repo and make these exercise changes to the app:
 
-1. Rename the list to "Home".
-1. Add a second list called "Work". It should work independently from "Home" list.
-1. Make task counts work per list
+1. ~~Rename the list to "Home".~~
+1. ~~Add a second list called "Work". It should work independently from "Home" list.~~
+1. ~~Make task counts work per list~~
 1. Add a third todo list called "All" containing all tasks from both "Home" and "Work" lists.
 1. When todo item is in "All" list, add a label to every todo item showing which list ("Home" or "Work") it belongs to.
 1. Extract filters (All, Active, Completed) into components and remove them from "Home" and "Work" list.
