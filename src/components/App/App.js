@@ -5,5 +5,6 @@ export const App = () => (
   <div id="app">
     <TodoList id="0"/>
     <TodoList id="1"/>
+    <TodoList id="2"/>
   </div>
 )

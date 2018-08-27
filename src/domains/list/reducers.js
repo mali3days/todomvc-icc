@@ -8,9 +8,10 @@ import {
 const initialState = {
   byId: {
     0: { id: 0, title: 'Home', tasks:[0] },
-    1: { id: 1, title: 'Work', tasks:[] }
+    1: { id: 1, title: 'Work', tasks:[] },
+    2: { id: 2, title: 'All', tasks:[] }
   },
-  byOrder: [0, 1]
+  byOrder: [0, 1, 2]
 }
 
 export default handleActions({
